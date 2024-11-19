@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RedarborAPI</name>
+    </assembly>
+    <members>
+        <member name="M:EmployeeController.GetAllEmployees">
+            <summary>
+            Obtiene todos los empleados.
+            </summary>
+            <returns>Lista de todos los empleados.</returns>
+            <response code="200">Devuelve una lista de empleados</response>
+            <response code="404">Si no hay empleados disponibles</response>
+        </member>
+        <member name="M:EmployeeController.GetEmployeeById(System.Int32)">
+            <summary>
+            Obtiene un empleado por su ID.
+            </summary>
+            <param name="id">El ID del empleado.</param>
+            <returns>El empleado correspondiente al ID, o un error 404 si no se encuentra.</returns>
+            <response code="200">Devuelve el empleado encontrado</response>
+            <response code="404">Si no se encuentra el empleado</response>
+        </member>
+        <member name="M:EmployeeController.AddEmployee(EmployeeDto)">
+            <summary>
+            Crea un nuevo empleado.
+            </summary>
+            <param name="employeeDto">DTO que contiene la información del nuevo empleado.</param>
+            <returns>El empleado recién creado.</returns>
+            <response code="201">Empleado creado exitosamente</response>
+            <response code="400">Si el modelo enviado no es válido</response>
+        </member>
+        <member name="M:EmployeeController.UpdateEmployee(System.Int32,UpdateEmployeeDto)">
+            <summary>
+            Actualiza un empleado existente.
+            </summary>
+            <param name="id">El ID del empleado que se desea actualizar.</param>
+            <param name="employeeDto">DTO con la información actualizada del empleado.</param>
+            <returns>Resultado de la operación de actualización.</returns>
+            <response code="204">Empleado actualizado exitosamente</response>
+            <response code="400">Si el modelo enviado no es válido</response>
+            <response code="404">Si no se encuentra el empleado para actualizar</response>
+        </member>
+        <member name="M:EmployeeController.DeleteEmployee(System.Int32)">
+            <summary>
+            Elimina un empleado por su ID.
+            </summary>
+            <param name="id">El ID del empleado a eliminar.</param>
+            <returns>Resultado de la operación de eliminación.</returns>
+            <response code="204">Empleado eliminado exitosamente</response>
+            <response code="404">Si no se encuentra el empleado para eliminar</response>
+        </member>
+        <member name="M:EmployeeController.ChangeEmployeeStatus(System.Int32,System.Int32)">
+            <summary>
+            Actualizar estado de un empleado por su ID.
+            </summary>
+            <param name="id">El ID del empleado a actualizar.</param>
+            <returns>Resultado de la operación de actualización de estado.</returns>
+            <response code="204">Actualizado exitosamente</response>
+            <response code="404">Si no se encuentra el empleado para eliminar</response>
+        </member>
+    </members>
+</doc>
